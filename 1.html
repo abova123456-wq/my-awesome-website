@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Расчёт инсулина</title>
+    <link rel="stylesheet" href="1.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header-img">
+            <img src="https://sun1-17.userapi.com/s/v1/ig2/UtEltUhTwD9f-iHx7Ko1jeRq-AlVKgtpHUpOwM-khbvxuxmV1fDR0dQrnUs6eTW5YJCpPVzAfJVU67l8mdEnDODg.jpg?quality=96&crop=13,0,569,569&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=240x240" alt="Insulin Logo" />
+        </div>
+        <h1>Расчёт Инсулина</h1>
+
+        <label for="product_name">Название продукта:</label>
+        <input type="text" id="product_name" placeholder="Например: Яблоко" />
+
+        <label for="carb_coefficient">Углеводный коэффициент (через запятую):</label>
+        <input type="text" id="carb_coefficient" placeholder="например: 1.0,1.2,1.5" />
+
+        <label for="carbohydrates">Углеводы (граммы, / 100г продукта, через запятую):</label>
+        <input type="text" id="carbohydrates" placeholder="например: 10,15,20" />
+
+        <label for="product_grams">Грамм продукта:</label>
+        <input type="text" id="product_grams" placeholder="например: 100" />
+
+        <label for="proteins">Белки (граммы, / 100г продукта, через запятую):</label>
+        <input type="text" id="proteins" placeholder="например: 5,8,12" />
+
+        <label for="fats">Жиры (граммы, / 100г продукта, через запятую):</label>
+        <input type="text" id="fats" placeholder="например: 3,6,9" />
+
+        <button onclick="addProductToList()">Добавить в список</button>
+
+        <div id="result">
+            <p>Результаты расчёта появятся здесь.</p>
+        </div>
+
+        <hr class="separator">
+
+        <h2>Список продуктов</h2>
+        <div id="productList">
+            <p>Список пока пуст.</p>
+        </div>
+        <div id="totalInsulin" class="total-insulin">
+            <p><strong>Общий инсулин:</strong> 0.0 ЕД</p>
+        </div>
+    </div>
+
+    <script src="1.js"></script>
+</body>
+</html>
